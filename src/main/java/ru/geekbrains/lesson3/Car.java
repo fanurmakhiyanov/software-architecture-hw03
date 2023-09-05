@@ -38,6 +38,14 @@ public abstract class Car {
         return fogLights;
     }
 
+    protected void setWheelsCount(int wheelsCount){
+        this.wheelsCount = wheelsCount;
+    }
+
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
+
     // endregion
 
     // region Private Fields
