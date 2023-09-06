@@ -1,5 +1,9 @@
 package ru.geekbrains.lesson3;
 
+import java.awt.*;
+
+import static ru.geekbrains.lesson3.FuelType.Diesel;
+
 public class Program {
 
     /**
@@ -43,6 +47,11 @@ public class Program {
      * @param args
      */
     public static void main(String[] args) {
+
+        Harvester harvester = new Harvester("MAN", "Bruder", Color.white);
+        RefuelingStation refuelingStation = new RefuelingStation();
+        harvester.setRefuelingStation(refuelingStation);
+        harvester.fuel();
 
     }
 

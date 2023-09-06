@@ -1,6 +1,8 @@
 package ru.geekbrains.lesson3;
 
 
+import java.awt.*;
+
 public class SportCar extends Car{
     public SportCar(String make, String model, Color color) {
         super(make, model, color);

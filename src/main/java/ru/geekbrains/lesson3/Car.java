@@ -1,5 +1,7 @@
 package ru.geekbrains.lesson3;
 
+import java.awt.*;
+
 public abstract class Car {
 
     // region Constructors
@@ -66,7 +68,7 @@ public abstract class Car {
     private int wheelsCount;
 
     // Тип топлива
-    private FuelType fueltype;
+    protected FuelType fueltype;
 
     // Тип коробки передач
     private GearboxType gearboxType;

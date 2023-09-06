@@ -1,5 +1,7 @@
 package ru.geekbrains.lesson3;
 
+import java.awt.*;
+
 public class FlyCar extends Car{
     public FlyCar(String make, String model, Color color) {
         super(make, model, color);
