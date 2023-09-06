@@ -2,9 +2,10 @@ package ru.geekbrains.lesson3;
 
 import java.awt.*;
 
-public class Harvester extends Car implements Fueling, Wiping{
+public class Harvester extends Car implements Fueling, Wiping, Washing{
 
     private Refueling refueling;
+    private CarWashStation carWashStation;
 
 
     public Harvester(String make, String model, Color color) {
@@ -12,8 +13,14 @@ public class Harvester extends Car implements Fueling, Wiping{
         setWheelsCount(6);
     }
 
+
+
     public void setRefuelingStation(RefuelingStation refuelingStation) {
         this.refueling = refuelingStation;
+    }
+
+    public void setCarWashStation(CarWashStation carWashStation) {
+        this.carWashStation = carWashStation;
     }
 
     /**
@@ -23,6 +30,13 @@ public class Harvester extends Car implements Fueling, Wiping{
     public void fuel() {
         if (refueling != null){
             refueling.fuel(FuelType.Diesel);
+        }
+    }
+
+    @Override
+    public void wash() {
+        if (carWashStation != null){
+            carWashStation.wash();
         }
     }
 
@@ -69,4 +83,5 @@ public class Harvester extends Car implements Fueling, Wiping{
     public void wipHeadlights() {
 
     }
+
 }

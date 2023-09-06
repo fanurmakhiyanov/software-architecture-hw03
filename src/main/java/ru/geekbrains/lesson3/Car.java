@@ -55,8 +55,16 @@ public abstract class Car {
     // Марка автомобиля
     private String make;
 
+    public String getMake() {
+        return make;
+    }
+
     // Модель
     private String model;
+
+    public String getModel() {
+        return model;
+    }
 
     // Цвет
     private Color color;

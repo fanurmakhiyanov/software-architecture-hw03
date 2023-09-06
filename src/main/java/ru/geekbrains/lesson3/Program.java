@@ -50,9 +50,13 @@ public class Program {
 
         Harvester harvester = new Harvester("MAN", "Bruder", Color.white);
         RefuelingStation refuelingStation = new RefuelingStation();
+        CarWashStation carWashStation = new CarWashStation();
         harvester.setRefuelingStation(refuelingStation);
+        harvester.setCarWashStation(carWashStation);
+        System.out.printf(harvester.getMake() + " " + harvester.getModel() + " ");
         harvester.fuel();
-
+        System.out.printf(harvester.getMake() + " " + harvester.getModel() + " ");
+        harvester.wash();
     }
 
     public static double calculateMaintenance(Car car){

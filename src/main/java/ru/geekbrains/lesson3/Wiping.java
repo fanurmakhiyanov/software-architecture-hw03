@@ -1,5 +1,9 @@
 package ru.geekbrains.lesson3;
 
+/**
+ * Автомойка
+ */
+
 public interface Wiping {
     void wipMirrors();
     void wipWindshield();
