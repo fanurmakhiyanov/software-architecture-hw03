@@ -4,8 +4,8 @@ public class RefuelingStation implements Refueling{
     @Override
     public void fuel(FuelType fuelType) {
         switch (fuelType){
-            case Diesel -> System.out.println("заправляется дизельным топливом");
-            case Gasoline -> System.out.println("заправляется бензином");
+            case Diesel -> System.out.println("Автомобиль заправляется дизельным топливом");
+            case Gasoline -> System.out.println("Автомобиль заправляется бензином");
         }
 
     }

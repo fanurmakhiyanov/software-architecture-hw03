@@ -1,5 +1,6 @@
 package ru.geekbrains.lesson3;
 
+import javax.sound.midi.Soundbank;
 import java.awt.*;
 
 import static ru.geekbrains.lesson3.FuelType.Diesel;
@@ -49,14 +50,19 @@ public class Program {
     public static void main(String[] args) {
 
         Harvester harvester = new Harvester("MAN", "Bruder", Color.white);
+        SportCar sportCar = new SportCar("Porsche", "911 GT2", Color.DARK_GRAY);
         RefuelingStation refuelingStation = new RefuelingStation();
         CarWashStation carWashStation = new CarWashStation();
         harvester.setRefuelingStation(refuelingStation);
         harvester.setCarWashStation(carWashStation);
-        System.out.printf(harvester.getMake() + " " + harvester.getModel() + " ");
+        sportCar.setRefuelingStation(refuelingStation);
+        sportCar.setCarWashStation(carWashStation);
+        System.out.printf(harvester.getMake() + " " + harvester.getModel() + "\n");
         harvester.fuel();
-        System.out.printf(harvester.getMake() + " " + harvester.getModel() + " ");
         harvester.wash();
+        System.out.printf("\n" + sportCar.getMake() + " " + sportCar.getModel() + "\n");
+        sportCar.fuel();
+        sportCar.wash();
     }
 
     public static double calculateMaintenance(Car car){
